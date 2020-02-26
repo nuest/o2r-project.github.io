@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Publications
+title: 📄 Publications
 description: Publications in the context of the project Opening Reproducible Research (o2r)
 categories:
   - publications
@@ -301,6 +301,15 @@ $(document).ready(function(){
     var publications = [];
     var talks = [];
 
+    // https://stackoverflow.com/questions/9229645/remove-duplicate-values-from-js-array
+    function uniqByKeepFirst(a, key) {
+        let seen = new Set();
+        return a.filter(item => {
+            let k = key(item);
+            return seen.has(k) ? false : seen.add(k);
+        });
+    }
+
     $.when(
         $.ajax({
             type: "get",
@@ -360,6 +369,11 @@ $(document).ready(function(){
             return new Date(b.date) - new Date(a.date);
         });
 
+        // if the article and preprint have precisely the same title, the article
+        // should be newer and earlier in the list after sorting
+        publications = uniqByKeepFirst(publications, pub => pub.title);
+        talks = uniqByKeepFirst(talks, talk => talk.title);
+
         var pubList = $("#publicationlist");
         var talkList = $("#talklist");
         // clear the list to remove the loader
@@ -391,7 +405,7 @@ $(document).ready(function(){
 <div id="publications">
     <ul id="publicationlist">
         <li><img alt="loading image" class="center" src="/public/images/loading.gif" width="32" /></li>
-        <li>If loading does not work, please visit <strong><a href="https://www.uni-muenster.de/forschungaz/project/9520">https://www.uni-muenster.de/forschungaz/project/9520</a></strong> and <strong><a href="https://www.uni-muenster.de/forschungaz/project/12343">https://www.uni-muenster.de/forschungaz/project/12343</a></strong>.</li>
+        <li>If loading the publications does not work, please check your adblockers and privacy plug-ins - they must allow requests to o2r.uni-muenster.de. Alternatively visit <strong><a href="https://www.uni-muenster.de/forschungaz/project/9520">https://www.uni-muenster.de/forschungaz/project/9520</a></strong> and <strong><a href="https://www.uni-muenster.de/forschungaz/project/12343">https://www.uni-muenster.de/forschungaz/project/12343</a></strong>.</li>
     </ul>
 </div>
 
@@ -401,7 +415,7 @@ $(document).ready(function(){
 <div id="talks">
     <ul id="talklist">
         <li><img alt="loading image" class="center" src="/public/images/loading.gif" width="32" /></li>
-        <li>If loading does not work, please visit <strong><a href="https://www.uni-muenster.de/forschungaz/project/9520">https://www.uni-muenster.de/forschungaz/project/9520</a></strong> and <strong><a href="https://www.uni-muenster.de/forschungaz/project/12343">https://www.uni-muenster.de/forschungaz/project/12343</a></strong>.</li>
+        <li>If loading the talks does not work, please check your adblockers and privacy plug-ins - they must allow requests to o2r.uni-muenster.de. Alternatively visit <strong><a href="https://www.uni-muenster.de/forschungaz/project/9520">https://www.uni-muenster.de/forschungaz/project/9520</a></strong> and <strong><a href="https://www.uni-muenster.de/forschungaz/project/12343">https://www.uni-muenster.de/forschungaz/project/12343</a></strong>.</li>
     </ul>
 </div>
 

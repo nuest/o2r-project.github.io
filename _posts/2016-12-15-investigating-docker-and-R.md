@@ -9,7 +9,16 @@ categories:
 author: 'Daniel Nüst'
 ---
 
-_This post is regularly updated (cf. [GH issue](https://github.com/o2r-project/o2r-project.github.io/issues/10)) and available under the URL **[http://bit.ly/docker-r](http://bit.ly/docker-r)**. Last update: 11 Jan 2018._
+<div style="border: 2px solid #CE5100; background-color: #ffe2d4; padding: 1em; margin: 1em 0;">
+<p>📢 PREPRINT PUBLISHED 🎉</p>
+
+<p><a href="https://arxiv.org/abs/2001.10641" title="Link to arXiv"><strong>The Rockerverse: Packages and Applications<br/>for Containerization with R</strong></a><br/>
+Daniel Nüst, Dirk Eddelbuettel, Dom Bennett, Robrecht Cannoodt, Dav Clark, Gergely Daroczi, Mark Edmondson, Colin Fay, Ellis Hughes, Sean Lopp, Ben Marwick, Heather Nolis, Jacqueline Nolis, Hong Ooi, Karthik Ram, Noam Ross, Lori Shepherd, Nitesh Turaga, Craig Willis, Nan Xiao, Charlotte Van Petegem. 2020. <a href="https://arxiv.org/abs/2001.10641" title="Link to arXiv">arXiv:2001.10641</a> [cs.SE]</p>
+
+<p><em>This post gave the idea for the paper above. It will not be updated anymore.</em></p>
+</div>
+
+_~~This post is regularly updated (cf. [GH issue](https://github.com/o2r-project/o2r-project.github.io/issues/10)) and available under the URL **[http://bit.ly/docker-r](http://bit.ly/docker-r)**.~~ Last update: 11 Jan 2018._
 
 Docker and R: How are they used and could they be used together?
 That is the question that we regularly ask ourself.
