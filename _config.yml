@@ -54,5 +54,5 @@ plugins:
   - jekyll-paginate
   # https://github.com/jekyll/jekyll-redirect-from
   - jekyll-redirect-from
-  # https://github.com/jekyll/jekyll-sitemap
-  - jekyll-sitemap
+  - jekyll-toc
+
